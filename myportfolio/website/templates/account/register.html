@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href=
+    "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+    <!-- Bootstrap Font Icon CSS -->
+    <link rel="stylesheet" href=
+    "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    
+    <!-- Remixicon Font Icon CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/account/register.css' %}">
+</head>
+<body>
+    <div class="form" >
+        <span class="form_title">Sign up</span>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {% if error %}
+        <div class="alert">
+            {{error}}
+        </div>
+        {% endif %}
+        <div class="form_input">
+            <i class="ri-user-line"></i>
+            <input type="text" placeholder="Name" class="form-control" name="username" value="{{ username }}">
+            <span class="bar"></span>
+        </div>
+        <div class="form_input">
+            <i class="ri-mail-line"></i>
+            <input type="email" placeholder="Email" class="form-control" name="email" value="{{ email }}">
+            <span class="bar"></span>
+        </div>
+        <div class="form_input">
+            <i class="ri-lock-line"></i>
+            <input type="password" placeholder="Password" class="form-control" name="password">
+            <span class="bar"></span>
+        </div>
+        <div class="form_input">
+            <i class="ri-lock-line"></i>
+            <input type="password" placeholder="Confirm Password" class="form-control" name="repassword">
+            <span class="bar"></span>
+        </div>
+        <button type="submit" class="form_button">Sign up</button>
+        <span class="form_switch">
+            Already have an account? <a href="{% url 'login' %}">Login</a>
+        </span>
+    </form>
+</div>
+
+
+
+
+</body>
+</html>

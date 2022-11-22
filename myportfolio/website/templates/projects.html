@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Baba Ibrahimov</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+    <!-- css codes -->
+    <link rel="stylesheet" href="{% static 'css/projects.css' %}">
+    <!-- Font Awesome Links  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <header>
+        <h1>I'm Baba Ibrahimov</h1>
+        <h2>There are my projects</h2>
+        <div class="searchbar">
+            <form action="" method="get">
+                <input type="text" name="q" id="searchbar" placeholder="Search here..." value="{{request.GET.q}}">
+                <button class="searchbutton" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+        <a href="{% url 'home' %}" class="gohome">Home</a>
+    </header>
+    <div class="container">
+        <div class="projects">
+            {% for project in objects_list %}
+            <div class="box">
+                <div class="imgBx">
+                    <img src="{{project.image}}" alt="Random Password Generator">
+                </div>
+                <div class="content">
+                    <h3>{{project.name}}</h3>
+                    {% if project.responsive %}
+                        <p class="responsive">responsive ✔</p>
+                    {% else %}
+                        <p class="not_available">Not Available</p>
+                    {% endif %}
+                    <h4>{{project.date}}</h4>
+                    <a class="seeproject" href="{% url 'project_detail' projects.id %}" target="_blank">See project <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            {% endfor %}
+            <!-- <div class="box">
+                <div class="imgBx">
+                    <img src="{% static 'img/RandomPasswordGenerator.png' %}" alt="Random Password Generator">
+                </div>
+                <div class="content">
+                    <h3>Random Password Generator</h3>
+                    <p class="responsive">responsive ✔</p>
+                    <h4>15 October 2022</h4>
+                    <a class="seeproject" href="">See project <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="{% static 'img/words&charactersCounter.png' %}" alt="Words & Character counter">
+                </div>
+                <div class="content">
+                    <h3>Words and Characters Counter</h3>
+                    <p class="responsive">responsive ✔</p>
+                    <h4>15 October 2022</h4>
+                    <a class="seeproject" href="">See project <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="{% static 'img/showHidePassword.png' %}" alt="Show & Hide Password">
+                </div>
+                <div class="content">
+                    <h3>Show and Hide Password</h3>
+                    <p class="not-responsive">not-responsive ✔</p>
+                    <h4>15 October 2022</h4>
+                    <a class="seeproject" href="">See project <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="{% static 'img/ToDoApp.png' %}" alt="To Do App">
+                </div>
+                <div class="content">
+                    <h3>To Do App</h3>
+                    <p class="responsive">responsive ✔</p>
+                    <h4>16 October 2022</h4>
+                    <a class="seeproject" href="">See project <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="{% static 'img/Profile Card.png' %}" alt="Profile Card">
+                </div>
+                <div class="content">
+                    <h3>Profile Card</h3>
+                    <p class="responsive">responsive ✔</p>
+                    <h4>14 Novomber 2022</h4>
+                    <a class="seeproject" href="">See project <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <div>
+        <a class="addproject" href="{% url 'addProject' %}">+ Add Project</a>
+    </div>
+    <footer>
+        <div class="content">
+            <h4><a href="{% url 'home' %}">Baba Ibrahimov</a></h4>
+            <div class="searchbar2">
+                <input type="text" name="searchbar" id="searchbar" placeholder="Search here...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="social">
+                <ul>
+                <li><a href="https://www.instagram.com/ibrah1mov._" target="_blank" style="--clr: #f3af2f;"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/baba.ibrahimov.10" target="_blank" style="--clr: #1877f2;"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://www.twitter.com/ibrahimovv23" target="_blank"style="--clr: #1da1f2;"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="../img/telegramQR.jpeg" target="_blank" style="--clr: #1877f2;"><i class="fa-brands fa-telegram"></i></a></li>
+                <li><a href="../index.html" target="_blank" style="--clr: #f51616;"><i class="fa-sharp fa-solid fa-envelope"></i></a></li>
+                <li><a href="https://www.github.com/babaibrahimov" target="_blank" style="--clr: #fff;"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/babaibrahimovv" target="_blank" style="--clr: #0d4896;"><i class="fa-brands fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright Baba Ibrahimov <span>©</span>
+        </div>
+    </footer>
+<body>
+    
+</body>
+
+</html>

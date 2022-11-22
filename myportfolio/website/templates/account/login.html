@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Baba Ibrahimov</title>
+    <link rel="stylesheet" href="{% static 'css/account/login.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-image: url("{% static 'bg.svg' %}");
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <!-- <div class="toggle">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div> -->
+        <!-- <div class="avatar">
+            <img src="./img/IMG_2488.JPG" alt="">
+        </div> -->
+        <h2>Login</h2>
+        <h3>Login for more</h3>
+        <form action="{% url 'login' %}" class="login-form" method="POST">
+            {% csrf_token %}
+            {% if error %}
+            <div class="alert">
+                {{error}}
+            </div>
+            {% endif %}
+            <div class="textbox">
+                <input type="text" placeholder="Username" class="form-control" name="username">
+                <span class=""><i class="fa-solid fa-circle-user"></i></span>
+            </div>
+            <div class="textbox">
+                <input type="password" placeholder="Password" class="form-control" name="password">
+                <span class=""><i class="fa-solid fa-lock"></i></span>
+            </div>
+            <button type="submit">LOGIN</button>
+            <a class="forgot" href="">Forgot your Password?</a>
+            <p>Don't have an account?<a class="signup" href="{% url 'register' %}">Signup</a></p>
+        </form>
+    </div>
+
+</body>
+</html>

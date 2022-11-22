@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hello, I'm Baba Ibrahimov. This is my portfolio site. Here you can find many things about me. You can download my CV and view my projects">
+    <meta name="keywords" content="Baba Ibrahimov, Portfolio, Programming, Website, Portfolio examples, Deveoper, Front-End Developer, CV">
+    <meta name="author" content="Baba Ibrahimov">
+    <title>Baba Ibrahimov</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+    <!-- css codes -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Font Awesome Links  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="profile">
+            <div class="content">
+                <img src="{% static 'img/profile2.JPG' %}" alt="">
+                <h2>Baba Ibrahimov<br>
+                    <span>Front-End Developer</span>
+                </h2>
+                <a href="{% url 'about' %}">About Me</a>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li style="--i:7;"><a href="{% url 'home' %}">Home</a></li>
+                <li style="--i:6;"><a href="{% url 'about' %}">About Me</a></li>
+                <li style="--i:5;"><a href="{% url 'projects' %}">Projects</a></li>
+                <li style="--i:4;"><a href="#contact">Contact</a></li>
+                <li style="--i:3;"><a href="{% url 'social' %}">Social</a></li>
+                {% if user.is_authenticated %}
+                    <li style="--i:1;"><a href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                    <li style="--i:1;"><a href="{% url 'login' %}">Login & Register</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="contact">
+            <div class="formBx">
+                <div class="imgBx">
+                    <img src="{% static 'img/bg4.jpg' %}" alt="">
+                </div>
+                <form action="" method="get">
+                    {% csrf_token %}
+                    <h4>Contact Me</h4>
+                    <label for="">Full Name</label>
+                    <input type="text" name="fullname" id="fullname" placeholder="Baba Ibrahimov" required>
+                    <label for="">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="babaibrahimovv@gmail.com" required>
+                    <textarea name="message" id="message" placeholder="Type message..." required></textarea>
+                    <input type="submit" value="send" id="send" style="--clr: #19ad14;">
+                    <input type="reset" value="reset" id="reset" style="--clr: #6047DF;">
+                </form>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="flex">
+            <div class="social">
+                <ul>
+                    <li><a href="https:www.instagram.com/ibrah1mov._" target="_blank" style="--clr: #f3af2f;"><i class="fa-brands fa-instagram"></i>
+                            Instagram</a></li>
+                    <li><a href="" style="--clr: #1877f2;"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                    </li>
+                    <li><a href="" style="--clr: #1da1f2;"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+                    <li><a href="" style="--clr: #1877f2;"><i class="fa-brands fa-telegram"></i> Telegram</a></li>
+                    <li><a href="" style="--clr: #f51616;"><i class="fa-sharp fa-solid fa-envelope"></i> Gmail</a>
+                    </li>
+                    <li><a href="" style="--clr: #fff;"><i class="fa-brands fa-github"></i> Github</a></li>
+                    <li><a href="" style="--clr: #0d4896;"><i class="fa-brands fa-linkedin"></i> Linkedin</a></li>
+                </ul>
+            </div>
+            <div class="nav2">
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About Me</a></listyle=>
+                    <li><a href="{% url 'projects' %}">Projects</a></listyle=>
+                    <li><a href="#contact">Contact</a></listyle=>
+                    <li><a href="{% url 'social' %}">Social</a></listyle=>
+                    <li><a href="{% url 'login' %}">Login & Regsiter</a></listyle=>
+                </ul>
+            </div>
+        </div>    
+       <div id="copyright">Copyright Baba Ibrahimov <span>©</span></div>
+    </footer>
+</body>
+
+</html>

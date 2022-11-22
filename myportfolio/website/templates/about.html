@@ -1,0 +1,274 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Baba Ibrahimov</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+    <!-- CSS link -->
+    <link rel="stylesheet" href="{% static 'css/about.css' %}"">
+    <!-- Font Awesome Link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <i class="fa-solid fa-x" id="icnbtn"></i>
+                <li><a href="{% url 'home' %}" style="--clr: blue;">Home</a></li>
+                <li><a href="{% url 'about' %}" style="--clr: red;">About Me</a></li>
+                <li><a href="{% url 'projects' %}" style="--clr: rgb(48, 202, 17);">Projects</a></li>
+                <li><a href="{% url 'home' %}" style="--clr: rgb(180, 34, 173);">Contact</a></li>
+                <li><a href="{% url 'social' %}" style="--clr: rgb(243, 111, 3);">Social</a></li>
+                <li><a href=""
+                        style="--clr: rgb(207, 187, 187);">Login&Register</a></li>
+                </ul>
+            <label for="" id="icon">
+                <i id="burger" class="fas fa-bars"></i>
+            </label>
+        </nav>
+        <div class="content">
+            <h1 id="name"><span>Baba</span> Ibrahimov</h1>
+            <h3 id="subname">Junior Developer</h3>
+            <span style="padding: 20px 0px 0px 10px;"><a href="{% static 'myCV.pdf' %}}" id="download" download>Download my
+                    CV</a></span>
+            <ul class="nav2">
+                <li><a href="#Cont">Who is Baba?</a></li>
+                <li><a href="#Edu">Education</a></li>
+                <li><a href="#Int">Interest</a></li>
+                <li><a href="#Certificates">Certificates</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <section id="Cont" class="Cont">
+            <div class="content" style="--delay: 1s">
+                <h4><span id="FirstLet">H</span>ello everyone. I am Baba Ibrahimov, I was born on August 20, 2004
+                    in <a href="https://en.wikipedia.org/wiki/Kurdamir" target="_blank">Kurdemir/Azerbaijan.</a> I
+                    received my first education in Kurdamir in 2010-2021. In 2021, I entered the
+                    Finance major of the <span>Finance and Accounting faculty</span> of the <a href="https://www.unec.edu.az" target="_blank">Azerbaijan State University of Economics.</a> 
+                    I have a great passion for programming, and since 2021 I have started learning and improving my knowledge
+                    as a <span>Front-End</span> enthusiast. My goal is to specialize in <span>Front-End</span> and become a Full Stack Developer
+                    after mastering all the secrets of <span>Back-End.</span>
+                </h4>
+            </div>
+            <div class="contact">
+                <h3 style="--clr: rgb(4, 255, 58);"><i class="fa-brands fa-whatsapp"></i> +994(70) 371 37 38</h3> 
+                <h3 style="--clr: rgb(4, 255, 58);"><i class="fa-brands fa-whatsapp"></i> +994(51) 534 11 09</h3> 
+                <h3 style="--clr: rgba(193, 201, 202, 0.863);"><i class="fa-solid fa-envelope"></i> babaibrahimovv@gmail.com</h3> 
+                <h3 style="--clr: rgba(193, 201, 202, 0.863);"><i class="fa-solid fa-envelope"></i> baba.ibrahimov.23@gmail.com</h3> 
+                <h3 style="--clr: rgb(255, 0, 0);"><i class="fa-solid fa-location-dot"></i> Baku/Azerbaijan</h3>
+                <a href="">Click here and contact me</a> 
+            </div>
+        </section>
+        <section id="Edu" class="Edu">
+            <div class="priSchool">
+                <h2>My First School</h2>
+                <p>Full secondary school No. 6 named after S. Pashayev, Kurdamir city</p>
+                <div class="imgBx">
+                    <img src="{% static 'img/primarySchool.jpg' %}" alt="">
+                    <ul>
+                        <li>
+                            <a href="https://www.instagram.com/kurdemir_6sayli" target="_blank"
+                                style="--clr: #f3af2f;"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/kurdemir6sayli" target="_blank" style="--clr: #1877f2;"><i
+                                    class="fa-brands fa-facebook"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="university">
+                <h2>University</h2>
+                <p>Azerbaijan State Economic University (Finance)</p>
+                <div class="imgBx">
+                    <img src="{% static 'img/UNEC.jpg' %}" alt="">
+                    <ul>
+                        <li>
+                            <a href="https://www.unec.edu.az" target="_blank" style="--clr: #000000;"><i
+                                    class="fa-solid fa-square-poll-horizontal"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/uneceduaz" target="_blank" style="--clr: #f3af2f;"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/100054660811203" target="_blank"
+                                style="--clr: #1877f2;"><i class="fa-brands fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://t.me/unecmelumatmerkezi" target="_blank" style="--clr: #1877f2;"><i
+                                    class="fa-brands fa-telegram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="Int" class="Int">
+            <h3>My <span>Interests</span> and <span>Hobbies</span></h3>
+            <div class="box" id="programming">
+                <img src="{% static 'img/programing.png' %}" alt="">
+                <h2>Programming</h2>
+            </div>
+            <div class="box" id="skateBoarding">
+                <img src="{% static 'img/skateboarding.webp' %}" alt="">
+                <h2>Skateboarding</h2>
+            </div>
+            <div class="box" id="rubicCube">
+                <img src="{% static 'img/rubiccube.webp' %}" alt="">
+                <h2>Rubic Cube</h2>
+            </div>
+            <div class="box" id="computerGames">
+                <img src="{% static 'img/computergames.webp' %}" alt="">
+                <h2>Computer Games</h2>
+            </div>
+        </section>
+        <section id="Certificates" class="Certificates">
+            <h2>Certificates</h2>
+            <div class="content">
+                <div class="box" style="--delay: 1s">
+                    <img src="{% static 'img/CS50x.jpeg' %}" alt="CS50x certificate">
+                    <h3>CS50x certificate</h3>
+                    <p>Coders Azerbaijan x UNEC</p>
+                    <a id="downloadcertificate" href="{% static 'img/CS50x.jpeg' %}" download>Download</a>
+                </div>
+                <div class="box" style="--delay: 1s">
+                    <img src="{% static 'img/Excel.jpeg' %}" alt="Excel certificate">
+                    <h3>Excel certificate</h3>
+                    <p>Public Education Center</p>
+                    <a id="downloadcertificate" href="{% static 'img/Excel.jpeg' %}" download="">Download</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="./about.js"></script>
+    <script>
+        
+        $(document).ready(function(){
+            $('#icon').click(function(){
+                $('ul').toggleClass('show');
+                $('#burger').toggleClass('fa-solid fa-x')
+            })
+        })
+
+        $(document).ready(function(){
+            $('#icnbtn').click(function(){
+                $('ul').toggleClass('show');
+                $('#burger').toggleClass('fa-solid fa-x')
+            })
+        })
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Baba Ibrahimov</title>
+    <link rel="stylesheet" href="./about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+        <header>
+            <label for="" class="logo">Baba Ibrahimov</label>
+            <ul>
+                <li><a id="home" href="../index.html">Home</a></li>
+                <li><a id="about" href="#">About Me</a></li>
+                <li><a id="blogs" href="../blogs/blogs.html">Blogs</a></li>
+                <li><a id="contact" href="../contact/contact.html">Contact</a></li>
+                <li><a id="social" href="../social/social.html">Social</a></li>
+                <li><a id="log_reg" href="/login&register/login_register.html">Login&Register</a></li>
+            </ul>
+            <label for="" id="icon">
+                <i id="burger" class="fas fa-bars"></i>
+            </label>
+        </header>
+        <div class="container">
+            <div class="imgbox">
+                <img src="../img/profile1.JPG" alt="">
+            </div>
+            <div class="content">
+                <div class="name">
+                    <h1> Baba Ibrahimov</h1>
+                    <h4>Front-End Developer</h4>
+                </div>
+                <div class="about">
+                <div class="que">
+                    <ul>
+                        <li>Education</li>
+                        <li>Age</li>
+                        <li>Location</li>
+                        <li>Interests</li>
+                        <li>Certificates</li>
+                        <li>Skills</li>
+                        <li>E-mail</li>
+                        <li>Phone</li>
+                        <li>GitHub</li>
+                    </ul>
+                </div>
+                <div class="ans">
+                    <ol>
+                        <li>Finance/UNEC</li>
+                        <li>18</li>
+                        <li>Baku/Azerbaijan</li>
+                        <li>Coding, Gaming, Financing</li>
+                        <li>CS50x Certificate</li>
+                        <li>HTML5, CSS3, JavaScript, Python, Django, C</li>
+                        <li><a href="https://accounts.google.com" target="_blank">baba.ibrahimov.23@gmail.com</a></li>
+                        <li>+994 (70) 371 - 37 - 38</li>
+                        <li><a href="https://www.github.com/ibrahimov23" target="_blank">ibrahimov23</a></li>
+                    </ol>
+                </div>
+                </div>
+            </div>
+        </div>
+        <a href="../myCV.pdf" target="_blank" download>Download my CV</a>
+        <footer>
+
+        </footer>
+
+
+        <script>
+            $(document).ready(function(){
+                $('#icon').click(function(){
+                    $('ul').toggleClass('show');
+                })
+            })
+            
+            $(document).ready(function(){
+                $('#icon').click(function(){
+                    $('#burger').toggleClass('fa-solid fa-x')
+                })
+            })
+        </script>
+</body>
+
+</html> -->

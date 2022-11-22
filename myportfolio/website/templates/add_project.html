@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Project | Baba Ibrahimov</title>
+    <link rel="stylesheet" href="{% static 'css/add_project.css'}">
+</head>
+<body>
+    <div class="mainarea">
+        <div class="addprojectform">
+            <form  enctype="multipart/form-data" method="POST">
+                {% csrf_token %}
+                <input type="text" name="name" id="project_name" class="inp1" placeholder="Project name"><br>
+                <input type="date" name="date " id="project_date" class="inp1" placeholder="Publishing date"><br>
+                <label for="" class="responsive">responsive</label>
+                <input type="checkbox" name="responsive" id="responsive"><br>
+                <input type="file" name="img">
+                <input type="submit" value="Add Project" id="sendbtn">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

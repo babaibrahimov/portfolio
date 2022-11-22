@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social | Baba Ibrahimov</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+
+    <!-- CSS link -->
+    <link rel="stylesheet" href="{% static 'css/social.css' %}">
+    <!-- Font Awesome Link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <label for="" class="logo"><a href="{% url 'home' %}">Baba Ibrahimov</a></label>
+            <ul>
+                <li><a href="{% url 'home' %}" style="--clr: blue;">Home</a></li>
+                <li><a href="{% url 'about' %}" style="--clr: red;">About</a></li>
+                <li><a href="{% url 'projects' %}" style="--clr: rgb(48, 202, 17);">Projects</a></li>
+                <li><a href="{% url 'home' %}" style="--clr: rgb(180, 34, 173);">Contact</a></li>
+                <li><a href="{% url 'social' %}" style="--clr: rgb(243, 111, 3);">Social</a></li>
+                <li><a href="" style="--clr: rgb(207, 187, 187);">Login&Register</a></li>
+            </ul>
+            <label for="" id="icon">
+                <i id="burger" class="fas fa-bars"></i>
+            </label>
+        </nav>
+        <div class="content">
+            <div class="social">
+                <h1>social</h1>
+                <ul>
+                    <li><a href="#instagram" style="--clr: #f3af2f;"><i class="fa-brands fa-instagram"></i>
+                            Instagram</a></li>
+                    <li><a href="#facebook" style="--clr: #1877f2;"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                    </li>
+                    <li><a href="#TtTlGm" style="--clr: #1da1f2;"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#TtTlGm" style="--clr: #1877f2;"><i class="fa-brands fa-telegram"></i> Telegram</a></li>
+                    <li><a href="#TtTlGm" style="--clr: #f51616;"><i class="fa-sharp fa-solid fa-envelope"></i> Gmail</a>
+                    </li>
+                    <li><a href="#GtLn" style="--clr: #fff;"><i class="fa-brands fa-github"></i> Github</a></li>
+                    <li><a href="#GtLn" style="--clr: #0d4896;"><i class="fa-brands fa-linkedin"></i> Linkedin</a></li>
+                </ul>
+            </div>
+            <div class="imgBx">
+                <img src="{% static 'img/social.png' %}" alt="">
+            </div>
+        </div>
+    </header>
+    <div class="container" id="container">
+        <section id="instagram" class="sec1">
+            <div class="profile">
+                <a href="https://www.instagram.com/ibrah1mov._" target="_blank"><img src="{% static 'img/profile2.JPG' %}"
+                        alt=""></a>
+            </div>
+            <div class="content">
+                <h1><a href="https://www.instagram.com/ibrah1mov._" target="_blank" >ibrah1mov._</a></h1>
+                <div class="about">
+                    <h3>Posts<br><span>4</span></h3>
+                    <h3>Followers<br><span>220+</span></h3>
+                    <h3>Follow <br><span>50</span></h3>
+                </div>
+            </div>
+        </section>
+        <section id="facebook" class="sec2">
+            <div class="profile">
+                <a href="https://www.facebook.com/baba.ibrahimov.10" target="_blank"><img src="{% static 'img/profile2.JPG' %}"
+                        alt=""></a>
+            </div>
+            <div class="content">
+                <h1><a href="https://www.facebook.com/baba.ibrahimov.10" target="_blank" class="text">Baba Ibrahimov</a></h1>
+            </div>
+        </section>
+        <section id="TtTlGm" class="sec3">
+            <div class="twitter">
+                <div class="profile" style="--clr: #1da1f2;">
+                    <img src="{% static 'img/twitter.jpg' %}" alt="">
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <h1>
+                    Baba Ibrahimov<br><span><a href="https://www.twitter.com/ibrahimovvv23"
+                    target="_blank">@ibrahimovvv23</a></span>
+                </h1>
+            </div>
+            <div class="telegram" style="--clr: #1877f2;">
+                <div class="profile">
+                    <img src="{% static 'img/telegram.jpg' %}" alt="">
+                    <i class="fa-brands fa-telegram"></i>
+                </div>
+            <h1>
+                Mr 23<br><span><a href="{% static 'img/telegramQR.jpeg' %}"
+                target="_blank">@ibrahimovvv23</a></span>
+            </h1></div>
+            <div class="gmail">
+                <div class="profile" style="--clr: #f51616;">
+                    <img src="{% static 'img/profile2.JPG' %}" alt="">
+                    <i class="fa-sharp fa-solid fa-envelope"></i>
+                </div>
+                <h1>Baba Ibrahimov<br><span><a href="{ url 'home' }" target="_blank">Contact me</a></span></h1>
+            </div>
+        </section>
+        <section id="GtLn" class="sec4">
+            <div class="github" style="--clr: #fff;">
+                <div class="profile">
+                    <img src="{% static 'img/github.png' %}" alt="">
+                    <div class="pp">
+                        <img src="{% static 'img/profile2.JPG' %}" alt="">
+                    </div>
+                </div>
+                <div class="content">
+                    <h1>Baba Ibrahimov</h1><br>
+                    <span><a href="https://www.github.com/babaibrahimov" target="_blank">babaibrahimov</a></span>
+                </div>
+            </div>
+            <div class="linkedin" style="--clr: #0d4896;">
+                <div class="profile">
+                    <img src="{% static 'img/linkedin.jpg' %}" alt="">
+                    <div class="pp">
+                        <img src="{% static 'img/profile2.JPG' %}" alt="">
+                    </div>
+                </div>
+                <div class="content">
+                    <h1>Baba Ibrahimov</h1><br>
+                    <span><a href="https://www.linkedin.com/in/babaibrahimovv" target="_blank">babaibrahimov</a></span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="./social.js"></script>
+</body>
+
+</html>

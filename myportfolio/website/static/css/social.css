@@ -1,0 +1,749 @@
+/* Google Fonts Links */
+
+    /* Poppins --> */ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+    /* Roboto --> */ @import url('https:fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+    /* Open Sans --> */ @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+    /* Oswald --> */ @import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+    /* Architects Daughtter --> */ @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+    /*Josefin Sans --> */ @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+    /*Ralevay --> */@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    /*Acme --> */ @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+    /*Advent Pro --> */ @import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300;400;500;600;700&display=swap');
+    /*Titillium Web --> */ @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,600;1,700&display=swap');
+    /*Quicksand --> */ @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+    /*Prompt -->*/ @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Google Fonts Links */
+
+*
+{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html{ scroll-behavior: smooth;}
+
+header
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: rgb(12, 9, 9);
+    color: #fff;
+    min-height: 100vh;
+}
+
+header nav
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    padding: 40px 60px;
+}
+
+header nav .logo
+{
+    font-size: 35px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 800;
+    border-bottom:  5px solid transparent;
+}
+header nav .logo:hover
+{
+    transition: .2s ease-in-out;
+    border-bottom: 5px solid #fff;
+}
+
+
+header nav .logo a
+{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+header nav ul
+{
+    display: flex;
+}
+
+header nav ul li
+{
+    list-style: none;
+    padding: 0px 10px;
+}
+
+header nav ul li a
+{
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Titillium Web', sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 4px 8px;
+}
+
+header nav ul li a:hover
+{
+    border: 1px solid var(--clr);
+    transition: .2s ease-in-out;
+    color: var(--clr);
+    box-shadow: 1px 1px 15px var(--clr);
+}
+
+header .content
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+header .content h1
+{
+    font-family: 'Raleway', sans-serif;
+    font-size: 200px;
+}
+
+header .content .social
+{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 40px;
+}
+
+header .content .imgBx
+{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 40%;
+    height: 600px;
+}
+
+header .content .imgBx img{ width: 100%; height: 100%; 
+    object-fit: contain;
+}
+
+header .content .social ul
+{
+    display: flex;
+    flex-direction: column;
+    /* float: right; */
+}
+
+header .content .social ul li
+{
+    list-style: none;
+    padding-bottom: 10px;
+}
+
+header .content .social ul li a
+{
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 16px;
+    padding: 3px 8px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+header .content .social ul li a:hover
+{
+    transition: .2s ease;
+    border: 1px solid var(--clr);
+    color: var(--clr);
+    box-shadow: 2px 2px 10px var(--clr)
+}
+
+nav #icon
+{
+    color: white;
+    font-size: 30px;
+    line-height: 80px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+i{color: var(--clr);}
+
+.container{background: rgb(12, 9, 9);
+    color: #fff;
+}
+
+.sec1,.sec2
+{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec2 {flex-direction: row-reverse;}
+
+.sec1 .profile,.sec2 .profile
+{
+    width: 400px;
+    height: 400px;
+}
+
+.sec1 .profile img, .sec2 .profile img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.sec1 .content, .sec2 .content
+{
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sec1 .content h1 a
+{
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 60px;
+    padding: 10px 20px;
+}
+
+.sec2 .content h1 a
+{
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 60px;
+    padding: 10px 20px;
+}
+
+.sec1 .content .about
+{
+    margin-top: 30px;
+    display: flex;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.sec1 .content .about h3
+{
+    padding-right: 50px;
+    font-weight: 800;
+}
+
+.sec1 .content .about h3 span
+{
+    font-weight: 200;
+    font-style: italic;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.sec3
+{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.sec3 .twitter,.telegram,.gmail
+{
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sec3  h1
+{
+    color: #fff;
+    font-family: 'Acme',sans-serif;
+    line-height: 20px;
+    padding-top: 10px;
+    font-size: 25px;
+    cursor:default;
+}
+
+.sec3 span a
+{
+    font-size: 14px;
+    font-weight: 100;
+    color: gray;
+}
+
+.sec3 a
+{
+    text-decoration: none;
+    color: #fff;
+}
+
+.sec3 .profile
+{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 0px 13px 2px var(--clr); 
+    box-shadow: 1px 1px 13px 1px var(--clr);
+}
+
+.sec3 .profile i
+{
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    font-size: 24px;
+    padding: 3px;
+    color: #000;
+}
+
+.sec3 .profile i:hover
+{
+    transition: .1s ease-in-out;
+    cursor: pointer;
+    color: var(--clr);
+    filter: drop-shadow(-2px -2px 30px var(--clr));
+}
+
+.sec3 .profile img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover; 
+}
+
+.sec3 .gmail h1 span a:hover
+{
+    border: 1px solid gray;
+    padding: 2px 8px;
+    border-radius: 20px;
+}
+
+.sec4
+{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.sec4 .github,.linkedin
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.sec4 .profile
+{
+    width: 400px;
+    height: 400px;
+    position: relative;
+    -webkit-box-shadow: 0px 0px 13px 2px var(--clr); 
+    box-shadow: 1px 1px 13px 1px var(--clr);
+    border-radius: 8px;
+}
+
+.sec4 .profile img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.sec4 .profile .pp
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.sec4 .profile .pp img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.sec4 h1
+{
+    color: #fff;
+    font-family: 'Raleway',sans-serif;
+    padding-top: 20px;
+    font-size: 32px;
+    cursor:default;
+    line-height: 10px;
+}
+
+.sec4 span a
+{
+    font-size: 24px;
+    color: gray;
+    text-decoration: none;
+    line-height: 5px;
+    font-family: 'Raleway',sans-serif;
+}
+@media (max-width: 1042px)
+{
+    header .content h1
+    {
+        font-size: 150px;
+    }
+    nav ul li a
+    {
+        font-size: 14px;
+    }
+    .logo a
+    {
+        font-size: 30px;
+    }
+    .sec1 .profile,.sec2 .profile
+    {
+        width: 360px;
+        height: 360px;
+    }
+    .sec1 .content
+    {
+        height: 360px;
+    }
+    .sec1 .content h1 a, .sec2 .content h1 a
+    {
+        font-size: 50px;
+    }
+    .sec1 .content .about h3
+    {
+        font-size: 14px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 912px)
+{
+    nav #icon
+    {
+        display: block;
+        font-size: 25px;
+    }
+    nav ul
+    {
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #000;
+        top: 100px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav li
+    {
+        display: block;
+        margin: 10px 0;
+        line-height: 30px;
+    }
+    nav ul.show
+    {
+        left: 0;
+    }
+    header .content h1
+    {
+        font-size: 130px;
+    }
+    .sec1 .profile,.sec2 .profile
+    {
+        width: 320px;
+        height: 320px;
+    }
+    .sec1 .content
+    {
+        height: 320px;
+    }
+    .sec1 .content h1 a, .sec2 .content h1 a
+    {
+        font-size: 40px;
+    }
+    .sec1 .content .about h3
+    {
+        font-size: 12px;
+        padding-right: 30px;
+    }
+    .sec3 .profile
+    {
+        width: 220px;
+        height: 220px;
+    }
+    .sec4 .profile
+    {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+@media (max-width: 768px)
+{
+    .sec1, .sec2
+    {
+        flex-direction: column;
+    }
+    .sec1 .profile,.sec2 .profile
+    {
+        width: 400px;
+        height: 400px;
+        margin-bottom: 20px;
+    }
+    .sec1 .content h1 a, .sec2 .content h1 a
+    {
+        font-size: 46px;
+    }
+    .sec1 .content .about h3
+    {
+        font-size: 14px;
+        padding-right: 20px;
+    }
+    .sec3 h1
+    {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 700px)
+{
+    header .content h1
+    {
+        font-size: 110px;
+    }
+    .sec1, .sec2
+    {
+        flex-direction: column;
+    }
+    .sec1 .profile,.sec2 .profile
+    {
+        width: 390px;
+        height: 390px;
+        margin-bottom: 20px;
+    }
+    .sec1 .content h1 a, .sec2 .content h1 a
+    {
+        font-size: 43px;
+    }
+    .sec1 .content .about h3
+    {
+        font-size: 14px;
+        padding-right: 20px;
+    } 
+    .sec3 .profile
+    {
+        width: 180px;
+        height: 180px;
+    }
+    .sec4 .profile
+    {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 618px)
+{
+    .sec1, .sec2
+    {
+        flex-direction: column;
+    }
+    .sec1 .profile,.sec2 .profile
+    {
+        width: 380px;
+        height: 380px;
+        margin-bottom: 20px;
+    }
+    .sec1 .content h1 a, .sec2 .content h1 a
+    {
+        font-size: 44px;
+    }
+    .sec1 .content .about h3
+    {
+        font-size: 14px;
+        padding-right: 20px;
+    }
+    .sec3 h1
+    {
+        font-size: 20px;
+    }
+    .sec3
+    {
+        flex-direction: column;
+    } 
+    .sec3 h1
+    {
+        margin-bottom: 30px;
+    }
+    .sec3 .profile
+    {   
+        width: 320px;
+        height: 320px;
+    }
+    .sec4 .profile
+    {
+        width: 240px;
+        height: 240px;
+    }
+}
+
+@media (max-width: 530px)
+{
+    header .content h1
+    {
+        font-size: 95px;
+    }
+    .sec1, .sec2
+    {
+        flex-direction: column;
+    }
+    .sec1 .profile,.sec2 .profile
+    {
+        width: 360px;
+        height: 360px;
+        margin-bottom: 20px;
+    }
+    .sec1 .content h1 a, .sec2 .content h1 a
+    {
+        font-size: 42px;
+    }
+    .sec1 .content .about h3
+    {
+        font-size: 14px;
+        padding-right: 20px;
+    }
+    .sec3 h1
+    {
+        font-size: 20px;
+    }
+    .sec4
+    {
+        flex-direction: column;
+        padding-top: 120px;
+    }
+    .sec4 .profile
+    {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+@media (max-width: 480px)
+{
+    .sec1, .sec2
+    {
+        flex-direction: column;
+    }
+    .sec1 .profile,.sec2 .profile
+    {
+        width: 320px;
+        height: 320px;
+        margin-bottom: 20px;
+    }
+    .sec1 .content h1 a, .sec2 .content h1 a
+    {
+        font-size: 40px;
+    }
+    .sec1 .content .about h3
+    {
+        font-size: 14px;
+        padding-right: 20px;
+    }
+    .sec3 h1
+    {
+        font-size: 20px;
+    }
+    .sec3 span a
+    {
+        font-size: 12px;
+    }
+    .sec4 h1
+    {
+        font-size: 24px;
+    }
+    .sec4 span a
+    {
+        font-size: 18px;
+    }
+    .sec4 .content
+    {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 420px)
+{
+    header .content h1
+    {
+        font-size: 75px;
+        margin-bottom: 20px;
+    } 
+    header .content .imgBx
+    {
+        width: 200px;
+        height: 600px;
+    }
+    .logo a
+    {
+        font-size: 25px;
+    }
+    nav #icon
+    {
+        font-size: 20px;
+    }
+    .sec1 .profile,.sec2 .profile
+    {
+        width: 300px;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+    .sec1 .content h1 a, .sec2 .content h1 a
+    {
+        font-size: 36px;
+    }
+    .sec3 .profile
+    {   
+        width: 280px;
+        height: 280px;
+    }
+    .sec4 .profile
+    {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+
+
+

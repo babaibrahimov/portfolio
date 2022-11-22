@@ -1,0 +1,215 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-size: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    font-size: 1.6rem;
+    background-color: #f6c9ff;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form
+{
+    position: relative;
+    max-width: 40rem;
+    min-width: 40rem;
+    padding: 10rem 0;
+    color: #fff;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 1px 1rem rgba(0,0,0,.1);
+    isolation: isolate;
+}
+
+.form::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10rem;
+    background: linear-gradient(to left, #fc6767, #ec800c);
+    border-radius: 1rem 1rem 100% 100%;
+    z-index: -1;
+}
+
+.form_title
+{
+    position: absolute;
+    top: 3.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+}
+
+.form>form
+{
+    padding: 2.5rem;
+    background-color: inherit;
+}
+
+.form_input
+{
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    margin: 0 auto;
+}
+
+.form_input>i
+{
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: #fc6767;
+}
+
+.form_input input
+{
+    position: relative;
+    width: 100%;
+    font: inherit;
+    padding: 1rem 0;
+    margin-top: .5rem;
+    border: none;
+    outline: none;
+}
+
+.form_input .bar
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.1);
+    width: 100%;
+    height: 1px;
+}
+
+.form_input .bar::before
+{
+    content: "";
+    position: absolute;
+    border-color: #fc6767;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition:   .5s;
+}
+
+.form_input>input:focus+ .bar::before
+{
+    transform: scaleX(1);
+}
+
+.form_button
+{
+    display: block;
+    margin: 2.5rem auto 3rem;
+    padding: 1rem 5rem;
+    background: linear-gradient(to left, #fc6767, #ec800c);
+    color: #fff;
+    font: inherit;
+    border: .5rem solid #fff;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3rem;
+}
+
+.form_button:hover
+{
+    background: linear-gradient(to right, #fc6767, #ec800c);
+}
+
+.form_switch
+{
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #a1a1a1;
+}
+
+.form_switch a
+{
+    text-decoration: none;
+    color: #fc6767;
+}
+
+.form_switch a:hover
+{
+    text-decoration: underline;
+}
+
+.alert
+{
+    background-color: rgb(252, 159, 159);
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 5px 10px;
+    width: 100%;
+    border-radius: 5px;
+    margin: 5px 0px;
+    font-size: 1.4rem;
+    display:inline-block;
+}
+
+@media screen and (min-width: 43.75rem) {
+    .form::before
+    {
+        height: 30rem;
+    }
+
+    .form_title
+    {
+        left: 10rem;
+        transform: none;
+    }
+    .form>form
+    {
+        transform: translateX(10rem);
+        border-radius: inherit;
+        box-shadow: inherit;
+    }
+}
+
+/* @media (max-width: 43.75rem)
+{
+    .form
+    {
+        max-width: none;
+        min-width: none;
+    }
+}
+*/
+
+/* @media (max-width: 423px)
+{
+    .form
+    {
+       width: 100%;
+    }
+    body
+    {
+        font-size: 1.6rem;
+        background-color: #f6c9ff;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+} */
